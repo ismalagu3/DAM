@@ -3,9 +3,7 @@ package com.prog03.figuras;
 public class Rectangulo {
     int base;
     int altura;
-    
-    Rectangulo rect;    
-    
+        
     public Rectangulo(){
         this.base = 0;
         this.altura = 0;
@@ -42,6 +40,6 @@ public class Rectangulo {
     }
     
     public boolean isCuadrado(){
-        return (rect.getAltura() != rect.getBase())?true:false;
+        return (getAltura() != getBase())?true:false;
     }
 }

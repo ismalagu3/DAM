@@ -9,7 +9,7 @@ public class principal {
         rect1.setBase(10);
         rect1.setAltura(13);
         
-        System.out.println(rect1.isCuadrado());
+        System.out.println("Es cuadrado el rectangulo?: " + rect1.isCuadrado());
         
         
         Rectangulo rect2 = new Rectangulo();
