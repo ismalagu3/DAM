@@ -40,7 +40,7 @@ public class Reserva extends javax.swing.JFrame {
         nHabitaciones = new javax.swing.JTextField();
         reservaHabitaciones = new javax.swing.JCheckBox();
         jSeparator3 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
+        verReserva = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -273,10 +273,10 @@ public class Reserva extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        jButton1.setText("Ver Reserva");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        verReserva.setText("Ver Reserva");
+        verReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                verReservaActionPerformed(evt);
             }
         });
 
@@ -313,7 +313,7 @@ public class Reserva extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(358, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(verReserva)
                 .addContainerGap(351, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -343,7 +343,7 @@ public class Reserva extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addComponent(panelTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(verReserva)
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -402,7 +402,7 @@ public class Reserva extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_reservaHabitacionesActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void verReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verReservaActionPerformed
         dialogo verReserva = new dialogo (this, true);
         verReserva.setDatos("Nombre: " + nombre.getText(), 1);
         verReserva.setDatos("Teléfono: " + telefono.getText(), 2);
@@ -413,9 +413,7 @@ public class Reserva extends javax.swing.JFrame {
         verReserva.setDatos("Nº Jornadas: " + jornadasCongreso.getText(), 7);
         verReserva.setDatos("Nº Habitaciones: " + nHabitaciones.getText(), 8);
         verReserva.setVisible(true);
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_verReservaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -450,7 +448,6 @@ public class Reserva extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner fecha;
-    private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -474,5 +471,6 @@ public class Reserva extends javax.swing.JFrame {
     private javax.swing.JLabel textJornadas;
     private javax.swing.JComboBox<String> tipoCocina;
     private javax.swing.JComboBox<String> tipoReserva;
+    private javax.swing.JButton verReserva;
     // End of variables declaration//GEN-END:variables
 }
