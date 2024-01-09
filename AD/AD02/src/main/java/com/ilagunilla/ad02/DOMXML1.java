@@ -26,14 +26,14 @@ public static void main(String[] args) {
         for (int temp = 0; temp < nList.getLength(); temp++) {
             Node nNode = nList.item(temp);
             System.out.println("\nCurrent Element :" + nNode.getNodeName());
-            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+            /*if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
-                System.out.println("numero de alumno : "+ eElement.getAttribute);
-                System.out.println("nombre : "+ eElement.getElementsByTagName);
+                System.out.println("numero de alumno : "+ eElement.getAttribute(name));
+                System.out.println("nombre : "+ eElement.getElementsByTagName(name));
                 System.out.println("apellido :"+ eElement.getElementsByTagName);
                 System.out.println("apodo : "+ eElement.getElementsByTagName);
                 System.out.println("marcas : "+eElement.getElementsByTagName);
-            }
+            }*/
         }
     } catch (Exception e) {
         e.printStackTrace();

@@ -2,17 +2,12 @@ package ut2_accesodatos;
 
 import java.util.*;
 import java.io.*;
-import java.nio.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import org.w3c.dom.*;
 import javax.xml.stream.*;
 import javax.xml.parsers.*;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -216,32 +211,22 @@ public class UT2_AccesoDatos {
         // EJERCICIO 1. Comienza crea un archivo DAT con los datos y crear el XML
         
         try {
-        ObjectOutputStream archivo = new ObjectOutputStream(new FileOutputStream("EMPLEADOS.DAT"));
-        
-        // CODIGO (int), NOMBRE (string), DIRECCION (string), SALARIO (float) y COMISION (float).
-        
-        Empleado empleado1 = new Empleado(1,"Juan","Madrid",1500,12);
-        Empleado empleado2 = new Empleado(2,"María","Murcia",1700,9);
-        Empleado empleado3 = new Empleado(3,"Amparo","Valencia",1600,7);
-        Empleado empleado4 = new Empleado(4,"José","Barcelona",1560,8);
-        Empleado empleado5 = new Empleado(5,"Alfonso","Sevilla",1670,10);
-        
-        archivo.writeObject(empleado1);
-        archivo.writeObject(empleado2);
-        archivo.writeObject(empleado3);
-        archivo.writeObject(empleado4);
-        archivo.writeObject(empleado5);
-        
-        archivo.close();
-        
-        /**
-        System.out.println(empleado1.CODIGO);
-        System.out.println(empleado2.COMISION); 
-        System.out.println(empleado3.DIRECCION);
-        System.out.println(empleado4.NOMBRE); 
-        System.out.println(empleado5.SALARIO);
-        **/
-        
+            ObjectOutputStream archivo = new ObjectOutputStream(new FileOutputStream("EMPLEADOS.DAT"));
+
+            Empleado empleado1 = new Empleado(1,"Juan","Madrid",1500,12);
+            Empleado empleado2 = new Empleado(2,"María","Murcia",1700,9);
+            Empleado empleado3 = new Empleado(3,"Amparo","Valencia",1600,7);
+            Empleado empleado4 = new Empleado(4,"José","Barcelona",1560,8);
+            Empleado empleado5 = new Empleado(5,"Alfonso","Sevilla",1670,10);
+
+            archivo.writeObject(empleado1);
+            archivo.writeObject(empleado2);
+            archivo.writeObject(empleado3);
+            archivo.writeObject(empleado4);
+            archivo.writeObject(empleado5);
+
+            archivo.close();
+               
             FileInputStream filearchivo = new FileInputStream("EMPLEADOS.DAT");
             ObjectInputStream leerarchivo = new ObjectInputStream(filearchivo);
      
@@ -253,8 +238,7 @@ public class UT2_AccesoDatos {
             ArrayList nombreArray = new ArrayList();
             ArrayList salarioArray = new ArrayList();
                      
-          while( filearchivo.available() > 0)
-          {
+          while( filearchivo.available() > 0){
            Empleado leer = (Empleado)leerarchivo.readObject();
               
             System.out.println("\nCodigo: " + leer.CODIGO); 
